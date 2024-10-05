@@ -120,7 +120,7 @@ th,td{
 }
 
 .banner-logo.left {
-    left: 0px;  /* Positions the left logo 10px from the left edge */
+    left: 20px;  /* Positions the left logo 10px from the left edge */
 }
 
 .banner-logo.right {
