@@ -80,8 +80,6 @@ th,td{
 }
 
 /* Website Banner */
-/* .banner {position: relative; font-family:'Roboto Slab',serif;} */
-
 .banner {
     display: block;
     margin-left: auto;
@@ -92,6 +90,23 @@ th,td{
 
 .banner:hover {
     transform: scale(1.05); /* Image grows slightly on hover */
+}
+
+.banner-container {
+    position: relative;
+    display: inline-block; /* or block depending on your layout */
+}
+
+.overlay-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 45px; /* adjust as needed */
+    font-weight: bold;
+    text-align: center;
+    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3); /* Dark shadow around the text */
 }
 
 
