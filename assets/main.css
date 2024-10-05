@@ -208,8 +208,6 @@ footer{font-size:0.875em; margin-top:12em; text-align:center;}
 
 .important-dates {
     font-family: Arial, sans-serif; /* Clean, readable font */
-    padding: 20px; /* Adequate padding around the content */
-    margin: 20px; /* Space around the block */
 }
 
 .important-dates ul {
