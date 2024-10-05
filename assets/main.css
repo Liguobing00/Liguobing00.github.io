@@ -93,8 +93,11 @@ th,td{
 }
 
 .banner-container {
-    position: relative;
-    display: inline-block; /* or block depending on your layout */
+    position: relative;  /* Establishes a positioning context for absolute children */
+    width: 100%;  /* Full width to ensure the banner covers the whole area */
+    display: flex;  /* Aligns children inline */
+    align-items: center;  /* Vertically centers the logos with the banner */
+    justify-content: space-between;  /* Spreads out the children to the full width */
 }
 
 .overlay-text {
@@ -103,10 +106,25 @@ th,td{
     left: 50%;
     transform: translate(-50%, -50%);
     color: white;
-    font-size: 45px; /* adjust as needed */
+    font-size: 40px; /* adjust as needed */
     font-weight: bold;
     text-align: center;
     text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3); /* Dark shadow around the text */
+}
+
+.banner-logo {
+    position: absolute;  /* Absolutely positions logos relative to the nearest positioned ancestor */
+    top: 50%;  /* Aligns the top of the element at the center */
+    transform: translateY(-50%);  /* Centers the logo vertically */
+    z-index: 10;  /* Ensures logos stay on top of the banner image */
+}
+
+.banner-logo.left {
+    left: 0px;  /* Positions the left logo 10px from the left edge */
+}
+
+.banner-logo.right {
+    right: 0px;  /* Positions the right logo 10px from the right edge */
 }
 
 
