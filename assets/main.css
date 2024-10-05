@@ -47,8 +47,8 @@ a:hover{color: #b2132e;}
 a:active{color: #e82945;}
 h1,h2,h3,h4{clear:left; color: #813c54; margin:1.5em 0em 1em 0em; font-family:'Roboto Slab',serif; text-shadow: 1px 1px 2px #d0d0d0;}
 h1{font-size:2.67em;}
-h2{font-size:2.00em;}
-h3{font-size:1.67em;}
+h2{font-size:1.67em; line-height:1.5em}
+h3{font-size:1.33em;}
 h4{font-size:1.33em;}
 p{list-style:none; margin:24px auto 24px auto; padding:0px; width:900px; text-align:left;}
 li a, p a {text-decoration:underline; text-decoration-color:#b8860b;}
@@ -106,7 +106,8 @@ th,td{
     left: 50%;
     transform: translate(-50%, -50%);
     color: white;
-    font-size: 40px; /* adjust as needed */
+    line-height: 1.2em;
+    font-size: 45px; /* adjust as needed */
     font-weight: bold;
     text-align: center;
     text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3); /* Dark shadow around the text */
