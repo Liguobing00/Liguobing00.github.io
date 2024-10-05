@@ -1,7 +1,7 @@
 
 # Welcome to the Singapore Section of the Combustion Institute (SSCI)
 
-Home | Membership | News and Events | Contacts
+Home | News and Events | Membership | Contacts
 
 ---
 
