@@ -178,3 +178,52 @@ td.sponsor img{width: 100%}
 
 footer{font-size:0.875em; margin-top:12em; text-align:center;}
 
+
+
+.event-details {
+    background-color: #f9f9f9; /* Light grey background */
+    border: 1px solid #ddd; /* Subtle border */
+    border-radius: 8px; /* Rounded corners for a softer look */
+    padding: 15px; /* Spacing inside the container */
+    width: 300px; /* Fixed width, adjust as needed */
+    margin: 10px auto; /* Centering the block */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Soft shadow for depth */
+}
+
+.event-details h5 {
+    color: #333; /* Dark grey text for better readability */
+    font-family: Arial, sans-serif; /* Modern, readable font */
+    margin: 5px 0; /* Spacing between each heading */
+}
+
+.event-details .event-website a {
+    color: #0066cc; /* Subtle blue for links */
+    text-decoration: none; /* No underline */
+}
+
+.event-details .event-website a:hover {
+    text-decoration: underline; /* Underline on hover for better interaction feedback */
+}
+
+
+.important-dates {
+    font-family: Arial, sans-serif; /* Clean, readable font */
+    padding: 20px; /* Adequate padding around the content */
+    margin: 20px; /* Space around the block */
+}
+
+.important-dates ul {
+    list-style: none; /* Removes default bullet points */
+    padding: 0; /* Removes default padding */
+}
+
+.important-dates li {
+    margin-bottom: 8px; /* Space between list items */
+    line-height: 1.6; /* Improved line height for readability */
+}
+
+.important-dates .date {
+    font-weight: bold; /* Makes date bold for emphasis */
+    margin-right: 5px; /* Space after the date */
+    color: #0056b3; /* A darker blue for contrast */
+}

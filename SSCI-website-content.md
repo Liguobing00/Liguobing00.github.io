@@ -27,6 +27,7 @@ Join us as we continue to ignite innovation and advance the understanding of com
 
 Date: May 18 - 22, 2025
 Location: Singapore
+Website: https://www.aspacc2025.org/
 
 The Singapore Section of the Combustion Institute is thrilled to host the 15th Asia-Pacific Conference on Combustion (ASPACC 2025) in the vibrant city of Singapore. This prestigious event is a cornerstone for combustion research and innovation in the Asia-Pacific region, bringing together experts from academia, industry, and government to discuss the latest advancements and future directions in the field of combustion science.
 
