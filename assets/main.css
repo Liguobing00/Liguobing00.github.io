@@ -35,7 +35,8 @@ body{
     font-size: 1.5em;
     line-height: 1.5em;
     margin: 20px auto;
-    width: 1000px;
+    /* width: 1000px; */
+    width: 100%;
 }
 
 a{color: #3a7f83; text-decoration:none; font-family:'Roboto Slab',serif;}
