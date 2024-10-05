@@ -88,7 +88,7 @@ th,td{
 }
 
 .banner:hover {
-    transform: scale(1.05); /* Image grows slightly on hover */
+    transform: scale(1.08); /* Image grows slightly on hover */
 }
 
 .banner-container {
