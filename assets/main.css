@@ -106,7 +106,7 @@ th,td{
     transform: translate(-50%, -50%);
     color: white;
     line-height: 1.2em;
-    font-size: 45px; /* adjust as needed */
+    font-size: 40px; /* adjust as needed */
     font-weight: bold;
     text-align: center;
     text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3); /* Dark shadow around the text */
