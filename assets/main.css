@@ -43,15 +43,15 @@ body {
 h1, h2, h3, h4 {
     clear: left;
     color: var(--primary-color);
-    margin: 1.5em 0 0.8em 0;
+    margin: 1.0em 0 0.8em 0;
     font-family: 'Roboto Slab', serif;
     font-weight: 700;
-    line-height: 1.3;
+    line-height: 1.1;
 }
-h1 { font-size: 2.5em; }
-h2 { font-size: 1.8em; }
-h3 { font-size: 1.5em; }
-h4 { font-size: 1.2em; }
+h1 { font-size: 3.5em; }
+h2 { font-size: 2.3em; }
+h3 { font-size: 1.8em; }
+h4 { font-size: 1.3em; }
 
 p {
     margin-bottom: 1em;
@@ -188,11 +188,11 @@ li {
 }
 .board-member {
     text-align: center;
-    width: 250px;
+    width: 290px;
 }
 .board-photo {
-    width: 150px;
-    height: 150px;
+    width: 200px;
+    height: 200px;
     border-radius: 50%;
     object-fit: cover;
     border: 4px solid #ddd;
