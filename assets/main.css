@@ -27,7 +27,7 @@ body {
     background-color: var(--bg-color);
     color: var(--text-color);
     font-family: 'Roboto', sans-serif;
-    font-size: 1.1em; /* Base font size */
+    font-size: 1.6em; /* Base font size */
     line-height: 1.6;
     text-align: center;
 }
@@ -85,14 +85,14 @@ li {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #000; /* Fallback for image */
+    /* background-color: #000; [> Fallback for image <] */
 }
 .banner {
     width: 100%;
     height: auto;
     max-height: 250px;
     object-fit: cover;
-    opacity: 0.6;
+    opacity: 0.95;
 }
 .overlay-text {
     position: absolute;
@@ -100,10 +100,10 @@ li {
     left: 50%;
     transform: translate(-50%, -50%);
     color: white;
-    font-size: 2.5rem;
+    font-size: 3.5rem;
     font-weight: bold;
     text-align: center;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.7);
     width: 90%;
 }
 .banner-logo {
@@ -112,7 +112,7 @@ li {
     transform: translateY(-50%);
     z-index: 10;
     height: 70%;
-    max-height: 80px;
+    max-height: 200px;
 }
 .banner-logo.left { left: 20px; }
 .banner-logo.right { right: 20px; }
