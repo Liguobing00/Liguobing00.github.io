@@ -13,7 +13,7 @@ DEFAULT_PROGRAMMING_EXTENSIONS = {
     '.go', '.php', '.swift', '.kt', '.rs', '.scala', '.pl', '.lua', '.jl',
     '.js', '.jsx', '.ts', '.tsx', '.html', '.css', '.scss', '.less', '.sass',
     '.sh', '.zsh', '.fish', '.ps1', '.bat', '.cmd', '.sql', '.psql', '.db',
-    '.sqlite', '.xml', '.json', '.toml', '.ini', '.yml', '.yaml', '.md',
+    '.sqlite', '.xml', '.json', '.toml', '.ini', '.yml', '.yaml',
     '.rst', '.Makefile', '.gradle', '.cmake', '.ninja', '.pqm', '.pq'
 }
 
@@ -24,7 +24,8 @@ DEFAULT_EXCLUDE_DIRS = {
 
 DEFAULT_EXCLUDE_FILES = {
     os.path.basename(__file__),
-    'package-lock.json', 'package.json', 'temp.py'
+    'package-lock.json', 'package.json', 'temp.py', '.gitignore',
+    'full_code.txt'
 }
 
 
