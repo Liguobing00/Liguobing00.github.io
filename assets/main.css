@@ -249,6 +249,5 @@ footer {
 }
 
 @media (max-width: 480px) {
-    .overlay-text { font-size: 1.3rem; }
-    .banner-logo { display: none; } /* Hide logos on very small screens to save space */
+    .overlay-text { font-size: 1.2rem; }
 }
