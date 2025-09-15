@@ -121,7 +121,7 @@ li {
 .navigation {
     background-color: #f4f4f4;
     border-bottom: 2px solid #ddd;
-    padding: 0.1em 0;
+    padding: 0.2em 0;
 }
 .navigation ul {
     list-style: none;
@@ -136,8 +136,8 @@ li {
 }
 .navigation a {
     font-family: 'Roboto Slab', serif;
-    font-size: 1.6em;
-    padding: 0.5em 1.2em;
+    font-size: 1.2em;
+    padding: 0.5em 1.0em;
     border-radius: 5px;
     transition: background-color 0.3s;
     text-decoration: none;
@@ -238,13 +238,12 @@ footer {
 }
 
 /* Responsive Media Queries */
-@media (max-width: 768px) {
+@media (max-width: 1200px) {
     body { font-size: 1em; }
-    .overlay-text { font-size: 1.8rem; }
-    .banner-logo { height: 50%; max-height: 50px; }
-    .banner-logo.left { left: 10px; }
-    .banner-logo.right { right: 10px; }
-    .navigation ul { flex-direction: column; align-items: center; }
+    .overlay-text { width: 70%; line-height: 1.2; }
+    .banner-logo { height: 70%; max-height: 70px; }
+    .banner-logo.left { left: 20px; }
+    .banner-logo.right { right: 20px; }
     .navigation li { margin: 0.3em 0; }
 }
 
