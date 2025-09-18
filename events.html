@@ -10,6 +10,51 @@
     <meta name="description" content="Events and news from the Singapore Section of the Combustion Institute (SSCI)">
     <meta name="KeyWords" content="Combustion, Events, Conference, Symposium, ASPACC">
     <title>Events | Singapore Section of the Combustion Institute</title>
+
+    <style>
+        /* New style for the extra eye-catching event item */
+        .featured-event-item {
+            background-color: #ffe0b2; /* A warmer, attention-grabbing background color (light orange/peach) */
+            border-left: 8px solid #e65100; /* A strong, contrasting border color */
+            padding: 20px 25px;
+            margin-bottom: 2em; /* More space to make it stand out */
+            border-radius: 0 8px 8px 0;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.15); /* More pronounced shadow */
+            transform: scale(1.02); /* Slightly larger */
+            transition: all 0.3s ease-in-out;
+        }
+
+        .featured-event-item:hover {
+            transform: scale(1.03) translateY(-5px); /* Enhanced hover effect */
+            box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+        }
+
+        .featured-event-item h4 {
+            color: #d84315; /* A strong, related color for the heading */
+            font-size: 1.5em; /* Make the title bigger */
+            margin-top: 0;
+            margin-bottom: 0.5em;
+        }
+
+        .featured-event-item .event-button {
+            display: inline-block;
+            background-color: #e65100; /* Use the strong border color for the button */
+            color: white;
+            padding: 12px 25px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-family: 'Roboto', sans-serif;
+            font-size: 1.1em;
+            margin-top: 0.5em;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+
+        .featured-event-item .event-button:hover {
+            background-color: #ff7043; /* Lighter shade on hover */
+            transform: translateY(-2px);
+            color: white; /* Keep text white on hover */
+        }
+    </style>
 </head>
 
 <body>
@@ -36,6 +81,23 @@
 
         <section class="event-section">
             <h3>Upcoming Events</h3>
+
+            <!-- NEW EYE-CATCHING EVENT ITEM -->
+            <div class="featured-event-item">
+                <h4>1st SSCI Annual Combustion Meeting & Call for Abstracts!</h4>
+                <p><strong>Date:</strong> December 9, 2025</p>
+                <p><strong>Location:</strong> LT6, National University of Singapore (NUS)</p>
+                <p>
+                    Don't miss our inaugural Annual Meeting, a key event for combustion researchers, engineers, and students in Singapore.
+                    This meeting features technical sessions, a poster session, and opportunities for collaboration.
+                    We are now accepting abstracts!
+                </p>
+                <p class="center-text">
+                    <a href="ssci_meeting.html" class="event-button">View Meeting Details & Submit Abstract</a>
+                </p>
+            </div>
+            <!-- END NEW EYE-CATCHING EVENT ITEM -->
+
             <div class="upcoming-event-item">
                 <h4>Singapore Annual Combustion Meeting 2025</h4>
                 <p><strong>Date:</strong> December 2025 (Exact dates to be announced)</p>
