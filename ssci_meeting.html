@@ -12,10 +12,9 @@
     <title>Call for Abstracts | First SSCI Annual Combustion Meeting</title>
 
     <style>
-        /* Specific styles for ssci_meeting.html based on LaTeX */
         :root {
-            --primarycolor: #005b96; /* Deep navy from LaTeX */
-            --highlightcolor: #660000; /* Deep red from LaTeX */
+            --primarycolor: #005b96; /* Deep navy */
+            --highlightcolor: var(--primary-color);
         }
 
         .meeting-title-container {
@@ -49,10 +48,6 @@
             line-height: 1.6;
         }
 
-        .meeting-content strong {
-            color: var(--highlightcolor);
-        }
-
         .meeting-content h3 {
             color: var(--primarycolor);
             font-size: 1.8em;
@@ -76,40 +71,6 @@
             font-size: 1.2em;
             font-weight: bold;
             color: var(--highlightcolor); /* Apply highlight color to these specific bold elements */
-        }
-
-        .meeting-content .program-chair {
-            margin-top: 30px;
-            text-align: left;
-            font-weight: bold;
-        }
-
-        /* Responsive adjustments for meeting page */
-        @media (max-width: 768px) {
-            .meeting-title-container h1 {
-                font-size: 2.5rem;
-            }
-            .meeting-title-container h2 {
-                font-size: 1.8rem;
-            }
-            .banner-logo {
-                display: none; /* Hide logos on smaller screens to prioritize title */
-            }
-            .overlay-text {
-                font-size: 1.8rem;
-            }
-        }
-
-        @media (max-width: 480px) {
-            .meeting-title-container h1 {
-                font-size: 1.8rem;
-            }
-            .meeting-title-container h2 {
-                font-size: 1.4rem;
-            }
-            .overlay-text {
-                font-size: 1.2rem;
-            }
         }
 
     </style>
@@ -178,10 +139,8 @@
             <p>We look forward to your valuable contributions and seeing you at the meeting. For any inquiries, please contact us at the email above.</p>
         </section>
 
-        <p class="program-chair">
             <strong>Programme Chair, Prof. Huangwei Zhang<br>
             National University of Singapore</strong>
-        </p>
 
     </main>
 

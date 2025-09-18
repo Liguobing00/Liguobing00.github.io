@@ -32,6 +32,10 @@ body {
     text-align: center;
 }
 
+strong {
+    color: var(--primary-color);
+}
+
 .content-wrapper {
     max-width: 960px;
     margin: 20px auto;
