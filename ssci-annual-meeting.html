@@ -24,14 +24,14 @@
 
         .meeting-title-container h1 {
             color: var(--primarycolor);
-            font-size: 3.5rem; /* Equivalent to Huge */
+            font-size: 3.5rem;
             font-weight: bold;
             margin: 0.3em 0 0.3em 0;
         }
 
         .meeting-title-container h2 {
             color: var(--primarycolor);
-            font-size: 2.5rem; /* Equivalent to LARGE */
+            font-size: 2.5rem;
             font-weight: bold;
             margin: 0;
         }
@@ -70,6 +70,29 @@
             color: var(--highlightcolor);
         }
 
+        /* New styles for the eye-catching venue link */
+        .venue-link {
+            background-color: #eef7ff;
+            padding: 4px 10px;
+            border-radius: 6px;
+            border: 1px solid #cce5ff;
+            text-decoration: none !important; /* Override default underline */
+            font-weight: bold;
+            transition: background-color 0.3s, box-shadow 0.3s;
+        }
+
+        .venue-link:hover {
+            background-color: #dbefff;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            color: var(--link-hover-color);
+        }
+
+        .venue-link::before {
+            content: '📍'; /* Unicode map pin emoji */
+            margin-right: 7px;
+            font-size: 1.1em;
+        }
+
     </style>
 </head>
 
@@ -100,7 +123,8 @@
         </div>
 
         <p>
-            The Singapore Section of the Combustion Institute (SSCI) is delighted to announce the <strong>1st SSCI Annual Combustion Meeting</strong>, to be held on <strong>9 December 2025</strong>, at the <strong><a href="ssci-annual-meeting-venue.html" title="Click for location and transport guide">LT6, National University of Singapore (NUS)</a></strong>.
+            The Singapore Section of the Combustion Institute (SSCI) is delighted to announce the <strong>1st SSCI Annual Combustion Meeting</strong>, to be held on <strong>9 December 2025</strong> at
+            <a href="ssci-annual-meeting-venue.html" class="venue-link" title="Click for location and transport guide" target="_blank">LT6, National University of Singapore</a>.
         </p>
 
         <p>
