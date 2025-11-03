@@ -164,6 +164,56 @@
             }
         }
 
+        /* Styles for the unified registration section */
+        .registration-section {
+            background: linear-gradient(135deg, #f5f7fa 0%, #eef7ff 100%);
+            border-radius: 12px;
+            padding: 30px 20px;
+            margin-top: 40px;
+            text-align: center;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+            border: 1px solid #cce5ff;
+        }
+
+        .registration-section h3 {
+            font-size: 2.2em;
+            margin-bottom: 15px;
+            color: var(--primarycolor);
+        }
+
+        .registration-section .pricing-info {
+            font-size: 1.2em;
+            color: #333;
+            margin-bottom: 30px;
+            line-height: 1.7;
+        }
+
+        .registration-section .pricing-info strong {
+            color: var(--primarycolor);
+            font-weight: 600; /* Bolder than default bold */
+        }
+
+        .single-register-button {
+            background-color: #e57373; /* A vibrant, welcoming color */
+            color: white;
+            padding: 16px 35px;
+            border: none;
+            border-radius: 50px; /* Pill-shaped for a modern look */
+            font-size: 1.3em;
+            font-weight: bold;
+            text-decoration: none;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+            display: inline-block;
+            box-shadow: 0 4px 12px rgba(229, 115, 115, 0.4);
+        }
+
+        .single-register-button:hover {
+            background-color: #d32f2f;
+            transform: translateY(-3px);
+            box-shadow: 0 6px 15px rgba(211, 47, 47, 0.5);
+        }
+
     </style>
 </head>
 
@@ -309,13 +359,15 @@
             </ul>
         </section>
 
-        <section>
-            <h3>Registration</h3>
-            <p>Registration for the meeting is now open. Please complete your registration and payment through our online portal. Registration Fee: <strong>SGD 120</strong> for SSCI members and <strong>SGD 150</strong> for non-members.</p>
-            <p class="center-text">
-                <a href="https://forms.gle/fViSuZNxKJTkauoA7" target="_blank" class="button-link">Register Now</a>
-            </p>
-        </section>
+        <section class="registration-section">
+                    <h3>Registration is Now Open!</h3>
+                    <p class="pricing-info">
+                        Registration Fee: <strong>SGD 120</strong> for SSCI members and <strong>SGD 150</strong> for non-members.
+                        <br>
+                        Click the button below to complete your registration and payment.
+                    </p>
+                    <a href="https://forms.gle/fViSuZNxKJTkauoA7" target="_blank" class="single-register-button">Register Now</a>
+                </section>
 
         <br>
         <strong>Organizers:</strong><br>
