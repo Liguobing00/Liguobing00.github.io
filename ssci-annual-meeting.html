@@ -17,6 +17,8 @@
             --highlightcolor: var(--primary-color);
         }
 
+        /* --- ORIGINAL STYLES --- */
+
         .meeting-title-container {
             text-align: center;
             margin-bottom: 20px;
@@ -101,6 +103,7 @@
             margin-top: 20px;
         }
 
+        /* MODIFIED SPEAKER CARD FOR INTERACTION */
         .speaker-card {
             background-color: #f9f9f9;
             border: 1px solid #ddd;
@@ -113,11 +116,37 @@
             display: flex;
             flex-direction: column;
             align-items: center;
+            cursor: pointer; /* Indicates clickable */
+            position: relative;
         }
 
         .speaker-card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+        }
+
+        /* "Click to View" Badge on Hover */
+        .speaker-card::after {
+            content: 'View Abstract & Biography';
+            position: absolute;
+            bottom: 15px;
+            left: 50%;
+            transform: translateX(-50%) translateY(10px);
+            background-color: var(--primarycolor);
+            color: white;
+            padding: 10px 16px;
+            border-radius: 20px;
+            font-size: 0.85em;
+            opacity: 0;
+            transition: all 0.3s ease;
+            pointer-events: none;
+            font-weight: bold;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        }
+
+        .speaker-card:hover::after {
+            opacity: 1;
+            transform: translateX(-50%) translateY(0);
         }
 
         .speaker-card img {
@@ -140,7 +169,7 @@
             font-style: italic;
             color: #555;
             margin: 0 0 10px 0;
-            flex-grow: 1; /* Helps align titles if affiliations have different lengths */
+            flex-grow: 1;
         }
 
         .speaker-card .talk-title {
@@ -149,22 +178,28 @@
             margin: 0;
             font-weight: bold;
             line-height: 1.3;
+            margin-bottom: 10px; /* Space for the badge */
         }
 
-        /* Responsive adjustments for speaker gallery */
+        /* Helper to hide raw data inside card */
+        .speaker-hidden-details {
+            display: none;
+        }
+
+        /* Responsive adjustments */
         @media (max-width: 768px) {
             .speaker-card {
-                width: calc(50% - 20px); /* Two cards per row */
+                width: calc(50% - 20px);
             }
         }
 
         @media (max-width: 480px) {
             .speaker-card {
-                width: 100%; /* One card per row */
+                width: 100%;
             }
         }
 
-        /* Styles for the unified registration section */
+        /* Registration Section */
         .registration-section {
             background: linear-gradient(135deg, #f5f7fa 0%, #eef7ff 100%);
             border-radius: 12px;
@@ -190,15 +225,15 @@
 
         .registration-section .pricing-info strong {
             color: var(--primarycolor);
-            font-weight: 600; /* Bolder than default bold */
+            font-weight: 600;
         }
 
         .single-register-button {
-            background-color: #e57373; /* A vibrant, welcoming color */
+            background-color: #e57373;
             color: white;
             padding: 16px 35px;
             border: none;
-            border-radius: 50px; /* Pill-shaped for a modern look */
+            border-radius: 50px;
             font-size: 1.3em;
             font-weight: bold;
             text-decoration: none;
@@ -212,6 +247,103 @@
             background-color: #d32f2f;
             transform: translateY(-3px);
             box-shadow: 0 6px 15px rgba(211, 47, 47, 0.5);
+        }
+
+        /* --- MODAL STYLES --- */
+        .modal-overlay {
+            display: none;
+            position: fixed;
+            z-index: 9999;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.7);
+            backdrop-filter: blur(4px);
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        .modal-content {
+            background-color: #fff;
+            margin: auto;
+            padding: 40px;
+            border-radius: 12px;
+            width: 90%;
+            max-width: 800px;
+            max-height: 85vh;
+            overflow-y: auto;
+            position: relative;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+            animation: modalFadeIn 0.3s ease-out;
+            border-top: 6px solid var(--primarycolor);
+        }
+
+        @keyframes modalFadeIn {
+            from {opacity: 0; transform: scale(0.95);}
+            to {opacity: 1; transform: scale(1);}
+        }
+
+        .close-modal-btn {
+            color: #aaa;
+            position: absolute;
+            top: 20px;
+            right: 25px;
+            font-size: 32px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: color 0.2s;
+            line-height: 1;
+        }
+
+        .close-modal-btn:hover {
+            color: #d32f2f;
+        }
+
+        .modal-header {
+            border-bottom: 1px solid #eee;
+            padding-bottom: 20px;
+            margin-bottom: 20px;
+        }
+
+        .modal-header h2 {
+            color: var(--primarycolor);
+            margin: 0 0 5px 0;
+            font-size: 2rem;
+        }
+
+        .modal-header .modal-affiliation {
+            font-style: italic;
+            color: #555;
+            font-size: 1.1rem;
+        }
+
+        .modal-body h4 {
+            color: #813c54;
+            margin-top: 25px;
+            margin-bottom: 10px;
+            font-size: 1.3rem;
+            border-left: 5px solid #813c54;
+            padding-left: 12px;
+        }
+
+        .modal-body p {
+            line-height: 1.7;
+            margin-bottom: 15px;
+            text-align: justify;
+            font-size: 1rem;
+            color: #333;
+        }
+
+        .modal-title-text {
+            font-weight: bold;
+            font-size: 1.1em;
+            color: #000;
+            background: #f4f4f4;
+            padding: 10px;
+            border-radius: 5px;
+            display: inline-block;
         }
 
     </style>
@@ -272,39 +404,45 @@
 
         <section>
             <h3>Programme</h3>
-
             <p class="center-text">
-            <img src="documents/SSCI_AnnualMtg - 20251118 - 1.png" style="width: 900px;"/>
+            <img src="documents/SSCI_AnnualMtg - 20251118 - 1.png" style="width: 900px; max-width:100%;"/>
             </p>
-
             <p class="center-text">
-            <img src="documents/SSCI_AnnualMtg - 20251118 - 2.png" style="width: 900px;"/>
+            <img src="documents/SSCI_AnnualMtg - 20251118 - 2.png" style="width: 900px; max-width:100%;"/>
             </p>
-
         </section>
 
         <section>
             <h3>Posters</h3>
-
             <p class="center-text">
-            <img src="documents/SSCI_posters - 1.png" style="width: 900px;"/>
+            <img src="documents/SSCI_posters - 1.png" style="width: 900px; max-width:100%;"/>
             </p>
-
             <p class="center-text">
-            <img src="documents/SSCI_posters - 2.png" style="width: 900px;"/>
+            <img src="documents/SSCI_posters - 2.png" style="width: 900px; max-width:100%;"/>
             </p>
-
         </section>
 
         <section>
             <h3>Invited Speakers</h3>
+
             <div class="speaker-gallery">
 
+                <!-- SPEAKER 1: Prof. Kaoru Maruta -->
                 <div class="speaker-card">
                     <img src="documents/speakers-photo/Prof. Kaoru Maruta.png" alt="Photo of Prof. Kaoru Maruta">
                     <h4>Prof. Kaoru Maruta</h4>
                     <p class="affiliation">Tohoku University</p>
                     <p class="talk-title">Combustion fundamentals for engine knock: Principles, predictions, and future fuel design</p>
+                    <!-- HIDDEN DETAILS -->
+                    <div class="speaker-hidden-details">
+                        <div class="hidden-abstract">
+                            <p><strong>[PASTE PROF. MARUTA'S ABSTRACT HERE]</strong></p>
+                            <p>You can use multiple paragraphs here if needed.</p>
+                        </div>
+                        <div class="hidden-bio">
+                            <p><strong>[PASTE PROF. MARUTA'S BIO HERE]</strong></p>
+                        </div>
+                    </div>
                 </div>
 
                 <div class="speaker-card">
@@ -396,14 +534,14 @@
         </section>
 
         <section class="registration-section">
-                    <h3>Registration is Now Open!</h3>
-                    <p class="pricing-info">
-                        Registration Fee: <strong>SGD 120</strong> for SSCI members and <strong>SGD 150</strong> for non-members.
-                        <br>
-                        Click the button below to complete your registration and payment.
-                    </p>
-                    <a href="https://forms.gle/mWPZLdcPvGubda9X7" target="_blank" class="single-register-button">Register Now</a>
-                </section>
+            <h3>Registration is Now Open!</h3>
+            <p class="pricing-info">
+                Registration Fee: <strong>SGD 120</strong> for SSCI members and <strong>SGD 150</strong> for non-members.
+                <br>
+                Click the button below to complete your registration and payment.
+            </p>
+            <a href="https://forms.gle/mWPZLdcPvGubda9X7" target="_blank" class="single-register-button">Register Now</a>
+        </section>
 
         <br>
         <strong>Organizers:</strong><br>
@@ -420,6 +558,108 @@
     <footer>
         &copy; Singapore Section of the Combustion Institute
     </footer>
+
+    <!-- SPEAKER MODAL STRUCTURE -->
+    <div id="speakerModal" class="modal-overlay">
+        <div class="modal-content">
+            <span class="close-modal-btn">&times;</span>
+
+            <div class="modal-header">
+                <h2 id="modalName">Speaker Name</h2>
+                <p id="modalAffiliation" class="modal-affiliation">Affiliation</p>
+            </div>
+
+            <div class="modal-body">
+                <h4>Talk Title</h4>
+                <div id="modalTitle" class="modal-title-text">The Title</div>
+
+                <h4>Abstract</h4>
+                <div id="modalAbstract">
+                    <!-- Abstract text injected via JS -->
+                </div>
+
+                <h4>Biography</h4>
+                <div id="modalBio">
+                    <!-- Bio text injected via JS -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- JAVASCRIPT FOR MODAL INTERACTION -->
+    <script>
+        // Get DOM elements
+        const modal = document.getElementById('speakerModal');
+        const closeBtn = document.querySelector('.close-modal-btn');
+        const cards = document.querySelectorAll('.speaker-card');
+
+        // Elements to fill inside the modal
+        const modalName = document.getElementById('modalName');
+        const modalAffiliation = document.getElementById('modalAffiliation');
+        const modalTitle = document.getElementById('modalTitle');
+        const modalAbstract = document.getElementById('modalAbstract');
+        const modalBio = document.getElementById('modalBio');
+
+        // Add click event to each speaker card
+        cards.forEach(card => {
+            card.addEventListener('click', () => {
+                // 1. Get data from the visible card
+                const name = card.querySelector('h4').innerText;
+                const affiliation = card.querySelector('.affiliation').innerText;
+                const title = card.querySelector('.talk-title').innerText;
+
+                // 2. Get data from the hidden details div
+                const hiddenDetails = card.querySelector('.speaker-hidden-details');
+
+                // Default messages if no content is pasted yet
+                let abstractHTML = "<p>Abstract details coming soon.</p>";
+                let bioHTML = "<p>Biography details coming soon.</p>";
+
+                if (hiddenDetails) {
+                    const absDiv = hiddenDetails.querySelector('.hidden-abstract');
+                    const bioDiv = hiddenDetails.querySelector('.hidden-bio');
+                    if (absDiv) abstractHTML = absDiv.innerHTML;
+                    if (bioDiv) bioHTML = bioDiv.innerHTML;
+                }
+
+                // 3. Populate the modal
+                modalName.innerText = name;
+                modalAffiliation.innerText = affiliation;
+                modalTitle.innerText = title;
+                modalAbstract.innerHTML = abstractHTML;
+                modalBio.innerHTML = bioHTML;
+
+                // 4. Show the modal
+                modal.style.display = 'flex';
+
+                // Prevent background scrolling
+                document.body.style.overflow = 'hidden';
+            });
+        });
+
+        // Close Modal Function
+        function closeModal() {
+            modal.style.display = 'none';
+            document.body.style.overflow = 'auto'; // Re-enable scrolling
+        }
+
+        // Event Listeners for closing
+        closeBtn.addEventListener('click', closeModal);
+
+        // Close if user clicks outside the white box
+        window.addEventListener('click', (event) => {
+            if (event.target == modal) {
+                closeModal();
+            }
+        });
+
+        // Close on Escape key
+        document.addEventListener('keydown', (event) => {
+            if (event.key === "Escape") {
+                closeModal();
+            }
+        });
+    </script>
 
 </body>
 </html>
