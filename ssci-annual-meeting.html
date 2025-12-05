@@ -346,6 +346,43 @@
             display: inline-block;
         }
 
+        /* --- NEW PROGRAMME DOWNLOAD BUTTON --- */
+        .programme-download-btn {
+            background-color: var(--primarycolor); /* Matches your deep navy */
+            color: #ffffff;
+            padding: 15px 40px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            border-radius: 50px;
+            text-decoration: none !important;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px; /* Space between icon and text */
+            box-shadow: 0 4px 15px rgba(0, 91, 150, 0.3);
+            transition: all 0.3s ease;
+            border: 2px solid var(--primarycolor);
+            margin-bottom: 30px;
+        }
+
+        .programme-download-btn:hover {
+            background-color: #ffffff;
+            color: var(--primarycolor);
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(0, 91, 150, 0.4);
+        }
+
+        /* Icon Animation on hover */
+        .programme-download-btn:hover span {
+            animation: bounce 1s infinite;
+        }
+
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
+            40% {transform: translateY(-5px);}
+            60% {transform: translateY(-3px);}
+        }
+
     </style>
 </head>
 
@@ -401,19 +438,15 @@
             </ul>
         </section>
 
-        <section class="registration-section">
-            <h3>Registration is Now Open!</h3>
-            <p class="pricing-info">
-                Registration Fee: <strong>SGD 120</strong> for SSCI members and <strong>SGD 150</strong> for non-members.
-                <br>
-                Click the button below to complete your registration and payment.
-            </p>
-            <a href="https://forms.gle/mWPZLdcPvGubda9X7" target="_blank" class="single-register-button">Register Now</a>
-        </section>
-
 
         <section>
             <h3>Programme</h3>
+
+            <!-- NEW DOWNLOAD BUTTON -->
+            <div style="text-align: center;">
+                <a href="documents/1st SSCI Annual Combustion Meeting Programme.pdf" target="_blank" class="programme-download-btn">Download Full Programme (PDF)</a>
+            </div>
+
             <p class="center-text">
             <img src="documents/SSCI_AnnualMtg - 20251118 - 1.png" style="width: 900px; max-width:100%;"/>
             </p>
@@ -648,6 +681,16 @@
                 </div>
 
             </div>
+        </section>
+
+        <section class="registration-section">
+            <h3>Registration is Now Open!</h3>
+            <p class="pricing-info">
+                Registration Fee: <strong>SGD 120</strong> for SSCI members and <strong>SGD 150</strong> for non-members.
+                <br>
+                Click the button below to complete your registration and payment.
+            </p>
+            <a href="https://forms.gle/mWPZLdcPvGubda9X7" target="_blank" class="single-register-button">Register Now</a>
         </section>
 
         <section>
